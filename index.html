@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swat Valley Tourism | Explore Pakistan's Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Swat<span class="logo-highlight">Valley</span></span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#swat-highlights" class="nav-link">Swat Highlights</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#cultural" class="nav-link">Culture</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link weather-btn" id="weather-btn">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span id="weather-temp">--°C</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="hero-title">Welcome to <span class="highlight">Swat Valley</span></h1>
+            <p id="hero-subtitle">The Switzerland of Pakistan - Where Heaven Meets Earth</p>
+            <div class="hero-btns">
+                <button class="cta-btn" id="explore-btn">
+                    <i class="fas fa-compass"></i> Explore Swat
+                </button>
+                <button class="cta-btn secondary" id="video-btn">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weather-widget">
+        <div class="weather-header">
+            <h3><i class="fas fa-map-marker-alt"></i> Swat Valley Weather</h3>
+            <button class="close-weather" id="close-weather">&times;</button>
+        </div>
+        <div class="weather-content">
+            <div class="weather-icon">
+                <i class="fas fa-sun" id="weather-icon"></i>
+            </div>
+            <div class="weather-info">
+                <div class="temp-main" id="current-temp">24°C</div>
+                <div class="weather-desc" id="weather-desc">Sunny</div>
+                <div class="weather-details">
+                    <div><i class="fas fa-wind"></i> <span id="wind-speed">12 km/h</span></div>
+                    <div><i class="fas fa-tint"></i> <span id="humidity">45%</span></div>
+                </div>
+            </div>
+            <div class="weather-forecast" id="weather-forecast">
+                <!-- Forecast will be populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal">
+        <div class="modal-content video-modal">
+            <span class="close-btn" id="close-video">&times;</span>
+            <div class="video-container">
+                <iframe id="swat-video" src="https://www.youtube.com/embed/-K6lDuvKsnI" 
+                        title="Swat Valley Documentary" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swat Highlights -->
+    <section class="swat-highlights" id="swat-highlights">
+        <div class="container">
+            <h2 class="section-title">Why Visit <span class="highlight">Swat Valley</span>?</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Majestic Mountains</h3>
+                    <p>Home to some of Pakistan's most stunning mountain ranges including Hindu Kush and Karakoram.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Crystal Clear Rivers</h3>
+                    <p>The Swat River flows through the valley, offering breathtaking views and water activities.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Rich History</h3>
+                    <p>Ancient Buddhist sites dating back to 2nd century BC, including Butkara Stupa.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Diverse Flora & Fauna</h3>
+                    <p>Alpine meadows, pine forests, and unique wildlife including snow leopards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <h2 class="section-title">Must-Visit <span class="highlight">Places in Swat</span></h2>
+            <div class="destination-filters">
+                <button class="filter-btn active" data-filter="all">All Places</button>
+                <button class="filter-btn" data-filter="lake">Lakes</button>
+                <button class="filter-btn" data-filter="valley">Valleys</button>
+                <button class="filter-btn" data-filter="historical">Historical</button>
+            </div>
+            <div class="destinations-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Experience -->
+    <section class="cultural" id="cultural">
+        <div class="container">
+            <h2 class="section-title">Swati <span class="highlight">Culture & Heritage</span></h2>
+            <div class="cultural-grid">
+                <div class="cultural-card">
+                    <div class="cultural-image">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="Swati Cuisine">
+                    </div>
+                    <div class="cultural-content">
+                        <h3><i class="fas fa-utensils"></i> Local Cuisine</h3>
+                        <p>Experience authentic Swati food including Chapali Kabab, Lamb Karahi, and traditional breads.</p>
+                        <button class="cultural-btn" onclick="showFoodGallery()">Explore Food</button>
+                    </div>
+                </div>
+                <div class="cultural-card">
+                    <div class="cultural-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622" alt="Swati Handicrafts">
+                    </div>
+                    <div class="cultural-content">
+                        <h3><i class="fas fa-gem"></i> Handicrafts</h3>
+                        <p>Famous for embroidery, woodwork, and traditional jewelry made by local artisans.</p>
+                        <button class="cultural-btn" onclick="showHandicrafts()">View Crafts</button>
+                    </div>
+                </div>
+                <div class="cultural-card">
+                    <div class="cultural-image">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Traditional Music">
+                    </div>
+                    <div class="cultural-content">
+                        <h3><i class="fas fa-music"></i> Music & Dance</h3>
+                        <p>Traditional Attan dance and folk music that reflects the rich cultural heritage.</p>
+                        <button class="cultural-btn" onclick="playTraditionalMusic()">Listen Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cultural Gallery -->
+            <div class="cultural-gallery" id="cultural-gallery">
+                <div class="gallery-header">
+                    <h3>Cultural Gallery</h3>
+                    <button class="close-gallery" onclick="closeGallery()">&times;</button>
+                </div>
+                <div class="gallery-grid">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title">Swat Valley <span class="highlight">Tour Packages</span></h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-badge">Best Seller</div>
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6" alt="Swat Basic Package">
+                    </div>
+                    <div class="package-content">
+                        <h3>Swat Essentials</h3>
+                        <p class="package-desc">3-day tour covering Mingora, Malam Jabba, and Fizagat</p>
+                        <div class="package-details">
+                            <div><i class="fas fa-clock"></i> 3 Days</div>
+                            <div><i class="fas fa-hotel"></i> 3-star Hotel</div>
+                            <div><i class="fas fa-car"></i> Transport Included</div>
+                        </div>
+                        <div class="package-price">
+                            <span class="original-price">$299</span>
+                            <span class="current-price">$249</span>
+                            <span class="per-person">/person</span>
+                        </div>
+                        <button class="book-btn" onclick="bookPackage('Swat Essentials', 249)">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-badge premium">Premium</div>
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306" alt="Kalam Valley Package">
+                    </div>
+                    <div class="package-content">
+                        <h3>Kalam Adventure</h3>
+                        <p class="package-desc">5-day luxury tour to Kalam, Mahodand Lake & Ushu Valley</p>
+                        <div class="package-details">
+                            <div><i class="fas fa-clock"></i> 5 Days</div>
+                            <div><i class="fas fa-hotel"></i> 4-star Resort</div>
+                            <div><i class="fas fa-hiking"></i> Guided Hikes</div>
+                        </div>
+                        <div class="package-price">
+                            <span class="original-price">$599</span>
+                            <span class="current-price">$499</span>
+                            <span class="per-person">/person</span>
+                        </div>
+                        <button class="book-btn" onclick="bookPackage('Kalam Adventure', 499)">Book Now</button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-badge">Historical</div>
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1528164344705-47542687000d" alt="Historical Swat">
+                    </div>
+                    <div class="package-content">
+                        <h3>Archaeological Tour</h3>
+                        <p class="package-desc">4-day historical journey to Buddhist sites & museums</p>
+                        <div class="package-details">
+                            <div><i class="fas fa-clock"></i> 4 Days</div>
+                            <div><i class="fas fa-graduation-cap"></i> Expert Guide</div>
+                            <div><i class="fas fa-camera"></i> Photography Tour</div>
+                        </div>
+                        <div class="package-price">
+                            <span class="original-price">$399</span>
+                            <span class="current-price">$349</span>
+                            <span class="per-person">/person</span>
+                        </div>
+                        <button class="book-btn" onclick="bookPackage('Archaeological Tour', 349)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="package-calculator" id="package-calculator">
+                <h3><i class="fas fa-calculator"></i> Package Cost Calculator</h3>
+                <div class="calculator-form">
+                    <div class="calc-group">
+                        <label>Select Package:</label>
+                        <select id="calc-package">
+                            <option value="249">Swat Essentials - $249</option>
+                            <option value="499">Kalam Adventure - $499</option>
+                            <option value="349">Archaeological Tour - $349</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label>Number of People:</label>
+                        <input type="number" id="calc-people" min="1" max="20" value="2">
+                    </div>
+                    <div class="calc-group">
+                        <label>Duration (Extra days):</label>
+                        <input type="number" id="calc-days" min="0" max="10" value="0">
+                    </div>
+                    <button onclick="calculateTotal()">Calculate Total</button>
+                    <div class="calc-result">
+                        <h4>Estimated Cost: <span id="total-cost">$0</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Swat Valley <span class="highlight">Gallery</span></h2>
+            <div class="gallery-controls">
+                <button class="gallery-filter active" data-filter="all">All</button>
+                <button class="gallery-filter" data-filter="summer">Summer</button>
+                <button class="gallery-filter" data-filter="winter">Winter</button>
+                <button class="gallery-filter" data-filter="spring">Spring</button>
+            </div>
+            <div class="photo-gallery">
+                <!-- Photos will be populated by JavaScript -->
+            </div>
+            <div class="gallery-modal" id="gallery-modal">
+                <span class="close-gallery" onclick="closePhotoModal()">&times;</span>
+                <img id="modal-image" src="" alt="">
+                <div class="modal-caption" id="modal-caption"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2><i class="fas fa-calendar-check"></i> Book Your Swat Tour</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="package-name">Selected Package:</label>
+                    <input type="text" id="package-name" readonly>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Travel Date:</label>
+                        <input type="date" id="date" required min="2024-01-01">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers:</label>
+                    <select id="travelers">
+                        <option value="1">1 Person</option>
+                        <option value="2" selected>2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5+">5+ People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="special-requests">Special Requests:</label>
+                    <textarea id="special-requests" rows="3" placeholder="Dietary requirements, accessibility needs, etc."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Booking Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Plan Your <span class="highlight">Swat Adventure</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3><i class="fas fa-headset"></i> Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 345 1234567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@swattourism.pk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Office</h4>
+                            <p>Mingora, Swat Valley, Khyber Pakhtunkhwa, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3><i class="fas fa-envelope"></i> Send Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>Swat<span class="logo-highlight">Valley</span></span>
+                    </div>
+                    <p>Discover the breathtaking beauty of Swat Valley - Pakistan's premier tourist destination. Experience nature, culture, and adventure like never before.</p>
+                    <div class="newsletter">
+                        <h4>Get Travel Updates</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email" id="newsletter-email">
+                            <button onclick="subscribeNewsletter()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#cultural">Culture</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Info</h4>
+                    <ul>
+                        <li><a href="#" onclick="showTravelTips()">Travel Tips</a></li>
+                        <li><a href="#" onclick="showBestTime()">Best Time to Visit</a></li>
+                        <li><a href="#" onclick="showTransport()">How to Reach</a></li>
+                        <li><a href="#" onclick="showAccommodation()">Accommodation</a></li>
+                        <li><a href="#" onclick="showSafety()">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Swat Essentials</h4>
+                    <div class="essentials-info">
+                        <div><strong>Altitude:</strong> 980-2900 meters</div>
+                        <div><strong>Languages:</strong> Pashto, Urdu, English</div>
+                        <div><strong>Best Season:</strong> April - October</div>
+                        <div><strong>Currency:</strong> Pakistani Rupee (PKR)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Swat Valley Tourism. All rights reserved. | <span id="current-year">2024</span></p>
+                <p>Developed with <i class="fas fa-heart" style="color: #e74c3c;"></i> for Pakistan Tourism</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Info Modal -->
+    <div class="modal" id="info-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-info">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
