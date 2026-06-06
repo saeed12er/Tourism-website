@@ -18,15 +18,15 @@ The website is deployed using **Microsoft Azure Static Web Apps (Free Tier)**.
 > screenshots of website 
 
 - Home Page Preview  
-[Website Screenshort](<Contact Page.png>)
+[Contact Page](<Contact Page.png>)
 - Tour Packages Section  
-[Website Screen short](Packege.png) 
+  [Package](Packege.png) 
 - Swat Highlights 
-[alt text](<Swat Highlights.png>)
+  [Swat Highlights](<Swat Highlights.png>)
 - Destination
-[alt text](Destination.png)
+[Destination pag](Destination.png)
 - Contact Page  
-![Website Screenshort](<Contact Page.png>)
+![Contact Page](<Contact Page.png>)
 
 
 ## 📌 Project Overview
