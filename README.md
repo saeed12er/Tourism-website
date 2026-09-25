@@ -1,19 +1,19 @@
-# 🌍 Deepseeker Tour and Travel Company | Static Website
+Deepseeker Tour and Travel Company | Static Website
 
 A modern, responsive static website developed for **Deepseeker Tour and Travel Company**. This project showcases tourism services, travel packages, and company information with a clean and user-friendly interface.
 
 The website is deployed using **Microsoft Azure Static Web Apps (Free Tier)**.
 
----
 
-## 🚀 Live Demo
 
-🌐 **Hosted on Microsoft Azure Static Web Apps**  
+Live Demo
+
+ **Hosted on Microsoft Azure Static Web Apps**  
 🔗 Live Website: https://purple-beach-0304d8a00.7.azurestaticapps.net/
 
 ---
 
-## 📸 Project Preview
+ Project Preview
 
 > screenshots of website 
 
@@ -29,13 +29,13 @@ The website is deployed using **Microsoft Azure Static Web Apps (Free Tier)**.
 ![Contact Page](<Contact Page.png>)
 
 
-## 📌 Project Overview
+ Project Overview
 
 This project is designed to represent a professional tourism company website. It provides users with information about travel destinations, services, and contact details in a simple and attractive layout.
 
----
 
-## 🛠️ Tech Stack
+
+ Tech Stack
 
 - **HTML5** – Page structure
 - **CSS3** – Styling and responsive design
@@ -44,7 +44,7 @@ This project is designed to represent a professional tourism company website. It
 
 ---
 
-## ☁️ Deployment (Azure Static Web Apps)
+ Deployment (Azure Static Web Apps)
 
 This project is deployed using **Azure Static Web Apps (Free Tier)**:
 
@@ -76,7 +76,7 @@ README.md
 
 ---
 
-## 🎯 Purpose of Project
+ Purpose of Project
 
 The purpose of this project is to:
 
@@ -88,7 +88,7 @@ The purpose of this project is to:
 
 ---
 
-## 👨‍💻 Developer
+Developer
 
 **Saeed Hamdard**  
 BS Software Engineering Student  
@@ -98,7 +98,7 @@ University of Malakand
 
 ---
 
-## 🚀 Future Improvements
+ Future Improvements
 
 - Add online booking system
 - Integrate payment gateway for tour packages
@@ -109,7 +109,7 @@ University of Malakand
 
 ---
 
-## 📜 License
+License
 
 This project is open-source and free to use for learning and educational purposes.
 
